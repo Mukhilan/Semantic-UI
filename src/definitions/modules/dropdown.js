@@ -774,7 +774,7 @@ $.fn.dropdown = function(parameters) {
                 ;
                 if(settings.match == 'both' || settings.match == 'text') {
                   text = String(module.get.choiceText($choice, false));
-                  if(text.search(beginsWithRegExp) !== -1) {
+                  if(text.indexOf(escapedTerm) !== -1) {
                     results.push(this);
                     return true;
                   }
